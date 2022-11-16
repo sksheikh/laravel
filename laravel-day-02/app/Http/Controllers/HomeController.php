@@ -10,4 +10,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function fullName()
+    {
+        return view('full-name');
+    }
+    public function calculator()
+    {
+        return view('calculator');
+    }
 }

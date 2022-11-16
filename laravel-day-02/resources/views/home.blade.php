@@ -13,12 +13,14 @@
     <div class="container">
         <a href="" class="navbar-brand">Logo</a>
         <ul class="navbar-nav">
-            <li><a href="" class="nav-link">Home</a></li>
-            <li><a href="" class="nav-link">About</a></li>
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="{{route('full')}}" class="nav-link">Full Name</a></li>
+            <li><a href="{{route('calculator')}}" class="nav-link">Calculator</a></li>
         </ul>
     </div>
 </nav>
 
+<h1 class="text-center">This is Home page</h1>
 <script src="assets/js/bootstrap.bundle.js"></script>
 </body>
 </html>
