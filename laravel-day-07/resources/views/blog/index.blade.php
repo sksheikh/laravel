@@ -1,4 +1,7 @@
 @extends('master')
+@section('title')
+    Home
+@endsection
 
 @section('body')
     <section class="py-5">
@@ -14,7 +17,7 @@
                                 <div class="row mb-3">
                                     <label for="" class="col-md-3">Category Name</label>
                                     <div class="col-md-9">
-                                        <select name="category_id" id="">
+                                        <select name="category_id" id="" class="form-control">
                                             <option value="">-- Select Category --</option>
                                             @foreach($Categories as $category)
                                                 <option value="{{$category->id}}">{{$category->name}}</option>

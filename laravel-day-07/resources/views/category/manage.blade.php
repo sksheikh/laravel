@@ -1,11 +1,16 @@
 @extends('master')
 
+@section('title')
+    Manage category
+@endsection
+
 @section('body')
     <section class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
+
                         <div class="card-header">All Category Information</div>
                         <div class="card-body">
                             <table class="table table-bordered table-hover">
@@ -19,16 +24,18 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($categories as $category)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Mens Fashion</td>
-                                    <td>Lorem ipsum dolor sit amet.</td>
-                                    <td><img src="" alt="" height="50" width="70" /></td>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$category->name}}</td>
+                                    <td>{{$category->description}}</td>
+                                    <td><img src="{{asset($category->image)}}" alt="" height="50" width="70" /></td>
                                     <td>
-                                        <a href="" class="btn btn-outline-success btn-sm">Edit</a>
+                                        <a href="{{route('category.edit',['id'=>$category->id])}}" class="btn btn-outline-success btn-sm">Edit</a>
                                         <a href="" class="btn btn-outline-danger btn-sm">Delete</a>
                                     </td>
                                 </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

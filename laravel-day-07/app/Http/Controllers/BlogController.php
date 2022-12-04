@@ -11,7 +11,9 @@ class BlogController extends Controller
     public function index()
     {
         $this->categories = Category::all();
-        return view('blog.index');
+        return view('blog.index',[
+            'Categories'=>$this->categories
+        ]);
 
     }
 

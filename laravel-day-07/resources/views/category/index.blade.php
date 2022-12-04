@@ -1,5 +1,9 @@
 @extends('master')
 
+@section('title')
+    Add  category
+@endsection
+
 @section('body')
     <section class="py-5">
         <div class="container">
