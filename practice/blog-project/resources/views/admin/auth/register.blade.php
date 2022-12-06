@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('admin.auth.master')
 
 @section('title')
     Register
@@ -13,10 +13,10 @@
 
                 <!-- Logo -->
                 <div class="auth-brand text-center text-lg-start">
-                    <a href="" class="logo-dark">
+                    <a href="{{route('home')}}" class="logo-dark">
                         <span><img src="{{asset('/')}}admin/assets/images/logo-dark.png" alt="" height="18"></span>
                     </a>
-                    <a href="index.html" class="logo-light">
+                    <a href="{{route('home')}}" class="logo-light">
                         <span><img src="{{asset('/')}}admin/assets/images/logo.png" alt="" height="18"></span>
                     </a>
                 </div>
@@ -76,7 +76,7 @@
 
                 <!-- Footer-->
                 <footer class="footer footer-alt">
-                    <p class="text-muted">Already have account? <a href="pages-login-2.html" class="text-muted ms-1"><b>Log In</b></a></p>
+                    <p class="text-muted">Already have account? <a href="{{route('login')}}" class="text-muted ms-1"><b>Log In</b></a></p>
                 </footer>
 
             </div> <!-- end .card-body -->
