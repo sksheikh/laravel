@@ -11,11 +11,11 @@
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('/')}}admin/images/favicon.ico">
+    <link rel="shortcut icon" href="{{asset('/')}}admin/assets/images/favicon.ico">
 
     <!-- App css -->
-    <link href="{{asset('/')}}admin/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="{{asset('/')}}admin/css/app.min.css" rel="stylesheet" type="text/css" id="app-style"/>
+    <link href="{{asset('/')}}admin/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('/')}}admin/assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style"/>
 
 </head>
 
@@ -30,10 +30,10 @@
                 <!-- Logo -->
                 <div class="auth-brand text-center text-lg-start">
                     <a href="{{route('home')}}" class="logo-dark">
-                        <span><img src="{{asset('/')}}admin/images/logo-dark.png" alt="" height="18"></span>
+                        <span><img src="{{asset('/')}}admin/assets/assets/images/logo-dark.png" alt="" height="18"></span>
                     </a>
                     <a href="{{route('home')}}" class="logo-light">
-                        <span><img src="{{asset('/')}}admin/images/logo.png" alt="" height="18"></span>
+                        <span><img src="{{asset('/')}}admin/assets/assets/images/logo.png" alt="" height="18"></span>
                     </a>
                 </div>
 
@@ -116,8 +116,8 @@
 <!-- end auth-fluid-->
 
 <!-- bundle -->
-<script src="{{asset('/')}}admin/js/vendor.min.js"></script>
-<script src="{{asset('/')}}admin/js/app.min.js"></script>
+<script src="{{asset('/')}}admin/assets/assets/js/vendor.min.js"></script>
+<script src="{{asset('/')}}admin/assets/assets/js/app.min.js"></script>
 
 </body>
 
