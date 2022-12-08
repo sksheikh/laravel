@@ -18,4 +18,15 @@ class Category extends Model
         self::$category->status = $request->status;
         self::$category->save();
     }
+
+    public static function updateCategory($request,$id)
+    {
+      self::$category = Category::find($id);
+      self::$category->name = $request->name;
+      self::$category->status = $request->status;
+      self::$category->save();
+
+    }
+
+
 }

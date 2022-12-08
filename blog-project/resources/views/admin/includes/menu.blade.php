@@ -49,7 +49,7 @@
                             <a href="{{route('add-category')}}">Add Category</a>
                         </li>
                         <li>
-                            <a href="crm-projects.html">Manage Category</a>
+                            <a href="{{route('manage-category')}}">Manage Category</a>
                         </li>
 
                     </ul>
@@ -65,10 +65,10 @@
                 <div class="collapse" id="sidebarEcommerce">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="apps-ecommerce-products.html">Add Brand</a>
+                            <a href="{{route('add-brand')}}">Add Brand</a>
                         </li>
                         <li>
-                            <a href="apps-ecommerce-products-details.html">Manage Brand</a>
+                            <a href="{{route('manage-brand')}}">Manage Brand</a>
                         </li>
 
                     </ul>
@@ -85,10 +85,10 @@
                 <div class="collapse" id="sidebarProjects">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="apps-projects-list.html">Add Product</a>
+                            <a href="{{route('add-product')}}">Add Product</a>
                         </li>
                         <li>
-                            <a href="apps-projects-details.html">Manage Product</a>
+                            <a href="{{route('manage-product')}}">Manage Product</a>
                         </li>
                     </ul>
                 </div>
