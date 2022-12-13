@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{asset('/')}}front/css/bootstrap.min.css">
 </head>
 <body>
+{{--Navbar--}}
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="">Logo</a>
@@ -32,6 +33,7 @@
 @yield('body')
 
 
+{{--Footer--}}
 <section class="py-2 bg-dark text-white">
     <div class="container">
         <div class="row">
