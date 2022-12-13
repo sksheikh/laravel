@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('title')
-    Add Category
+    Add Brand
 @endsection
 
 @section('body')
@@ -12,10 +12,10 @@
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="javascript: void(0);">Ustora</a></li>
                         <li class="breadcrumb-item"><a href="javascript: void(0);">Category</a></li>
-                        <li class="breadcrumb-item active">Add Category</li>
+                        <li class="breadcrumb-item active">Add Brand</li>
                     </ol>
                 </div>
-                <h4 class="page-title">Add Category</h4>
+                <h4 class="page-title">Add Brand</h4>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <span class="text-success">{{Session::has('success') ? Session::get('success') : ''}}</span>
 
-                    <form action="{{route('create-category')}}" method="post">
+                    <form action="{{route('create-brand')}}" method="post">
                         @csrf
                         <div class="row">
                             <div class="col-xl-6">
@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="submit" class="btn btn-success" value="Add Category">
+                                    <input type="submit" class="btn btn-success" value="Add Brand">
                                 </div>
 
 
@@ -62,3 +62,4 @@
     </div>
     <!-- Start Content Here -->
 @endsection
+
