@@ -12,23 +12,33 @@
                     <div class="card">
 
                             <div class="card-header">
-                                <span class="h3 card-title float-start">Add Course Category</span>
-                                <a href="{{route('course-categories.index')}}" class="btn btn-info float-end">Manage</a>
+                                <span class="h3 card-title float-start">Add Course Sub Category</span>
+                                <a href="{{route('course-sub-categories.index')}}" class="btn btn-info float-end">Manage</a>
                             </div>
 
 
                             <div class="card-body">
-                                <p class="text-success">{{Session::has('success') ? Session::get('success') : ''}}</p>
-                                <form action="{{route('course-categories.store')}}" method="post">
+                                <form action="{{route('course-sub-categories.store')}}" method="post">
                                     @csrf
 
                                     <div class="row mt-3">
                                         <div class="col-md-8 mx-auto">
                                             <label for="" class="">Category Name</label>
-                                            <input type="text" name="name" class="form-control">
+                                            <select name="category_id" id="" class="form-control">
+                                                <option value="">--Select Category--</option>
+                                                @foreach($courseCategories as $courseCategory)
+                                                <option value="{{$courseCategory->id}}">{{$courseCategory->name}}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
 
+                                    <div class="row mt-3">
+                                        <div class="col-md-8 mx-auto">
+                                            <label for="">Sub Category Name</label>
+                                            <input type="text" name="name" class="form-control">
+                                        </div>
+                                    </div>
 
                                     <div class="row mt-3">
 

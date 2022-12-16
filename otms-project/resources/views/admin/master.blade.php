@@ -58,6 +58,19 @@
 
 @include('admin.includes.scripts')
 @yield('script')
+@if(Session::has('success'))
+    <script>
+        toastr.success("{{Session::get('success')}}")
+    </script>
+    {{Session::forget('success')}}
+    @endif
+
+@if(Session::has('error'))
+    <script>
+        toastr.success("{{Session::get('error')}}")
+    </script>
+    {{Session::forget('error')}}
+@endif
 </body>
 
 <!-- Mirrored from coderthemes.com/hyper/saas/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 May 2022 14:57:36 GMT -->

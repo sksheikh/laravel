@@ -11,8 +11,8 @@
                 <div class="col-10 mx-auto">
                     <div class="card">
                         <div class="card-header">
-                            <span class="h3 card-title">Course Category</span>
-                            <a href="{{route('course-categories.create')}}" class="btn btn-info float-end">Create New</a>
+                            <span class="h3 card-title">Course Sub Category</span>
+                            <a href="{{route('course-sub-categories.create')}}" class="btn btn-info float-end">Create New</a>
                         </div>
 
 
@@ -21,20 +21,23 @@
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Category Name</th>
-                                    <th>Category Status</th>
-                                    <th>Category Action</th>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>slug</th>
+                                    <th>action</th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($courseCategories as $courseCategory)
+                                @foreach($courseSubCategories as $courseSubCategory)
                                 <tr>
                                    <td>{{$loop->iteration}}</td>
-                                    <td>{{$courseCategory->name}}</td>
-                                    <td>{{$courseCategory->status == 1 ? 'Published' : 'Unpublished'}}</td>
+                                    <td>{{$courseSubCategory->name}}</td>
+                                    <td>{{$courseSubCategory->status == 1 ? 'Published' : 'Unpublished'}}</td>
+                                    <td>{{$courseSubCategory->slug}}</td>
                                     <td>
-                                        <a href="{{route('course-categories.edit',$courseCategory->id)}}" class="btn btn-sm btn-info">Edit</a>
-                                        <form action="{{route('course-categories.destroy',$courseCategory->id)}}" method="post" class="d-inline-block" onsubmit="return confirm('Are you to delete this')">
+                                        <a href="{{route('course-sub-categories.edit',$courseSubCategory->id)}}" class="btn btn-sm btn-info">Edit</a>
+                                        <form action="{{route('course-sub-categories.destroy',$courseSubCategory->id)}}" method="post" class="d-inline-block" onsubmit="return confirm('Are you to delete this')">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-sm btn-danger ">Delete</button>

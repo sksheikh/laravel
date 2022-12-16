@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\CourseCategory;
 use Illuminate\Http\Request;
 
 class CourseCategoryController extends Controller
@@ -14,7 +15,9 @@ class CourseCategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.courseCategory.index');
+        return view('admin.courseCategory.index',[
+            'courseCategories'=>CourseCategory::all()
+        ]);
     }
 
     /**
@@ -35,7 +38,8 @@ class CourseCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        CourseCategory::createOrUpdateCourseCategory($request);
+        return redirect()->route('course-categories.index')->with('success','Created new course category successfully');
     }
 
     /**
@@ -57,7 +61,9 @@ class CourseCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.courseCategory.edit',[
+           'courseCategory' =>CourseCategory::find($id)
+        ]);
     }
 
     /**
@@ -69,7 +75,8 @@ class CourseCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        CourseCategory::createOrUpdateCourseCategory($request,$id);
+        return redirect()->route('course-categories.index')->with('success','Updated course category successfully');
     }
 
     /**
@@ -80,6 +87,7 @@ class CourseCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        CourseCategory::find($id)->delete();
+        return redirect()->back()->with('success','Deleted course category successfully');
     }
 }
